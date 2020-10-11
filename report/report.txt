@@ -1,0 +1,3 @@
+EECS 731 Projectg 5 - World Wide Products Inc
+
+Data aquired from: https://www.kaggle.com/felixzhao/productdemandforecasting
