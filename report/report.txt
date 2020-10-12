@@ -1,3 +1,30 @@
 EECS 731 Projectg 5 - World Wide Products Inc
 
 Data aquired from: https://www.kaggle.com/felixzhao/productdemandforecasting
+Main Goal: Build one or more forecasting models to determine the demand for a particular product using the other columns as features"
+
+Initial Setup:
+After downloading the data and loading it into jupyter notebooks I see that we don't have a ton of information.
+The initial rows in the data set are:
+Product_Code 	Warehouse 	Product_Category 	Date 	Order_Demand
+
+Initial ideas and thoughts:
+"Formulate one or two ideas on how feature engineering would help the data set to establish additional value using exploratory data analysis"
+- So we want to pick ONE particular product and make a model determining the demand. To me this sounds like we should remove the OTHER products to not muddy the data.
+- Which product should I pick? My gut tells me to pick the product code that appears most often. This might involve counting unqiue instances of product_code 
+- According to value_counts, product code Product_1359 occures 16936 times in the data, this looks like a good candidate with enough data for predictions.
+- Data like "Warehouse" donesn't seem that relevant right now. The same as Product_Code now that everything is just 1 product now that I think about it.
+- According to the info on our dataframe, all columns are listed as dtypes 'object'. I might have to convert them all to numbers somehow. One-hot encoding?
+- At least the date and order_demand should be numerical from what I see.
+
+Actions:
+- Filter out all products except Product_1359
+- Delete "Warehouse" as I don't believe this to be relevant to what we want.
+- Also delete Product_code and product_category? These should be the same for all listings
+- Find a way to make the data numerical, at least the date and order_demand numerical
+
+Ideas:
+I'd like to try Linear Regression again, I think we should be able to fit the data we have well enought to get an idea of... something?
+My first instinct is to map "demand" over the date, thus seeing how demand has gone up and down over time. Sounds like the simplest way to me.
+
+
