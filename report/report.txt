@@ -38,7 +38,7 @@ A resounding failure! I guess from my lack of feaures it didn't really predict..
 The scatter plot tells the same story (LinearRegressionPlot01 in the visuals folder). Linear Regression, or at least how I implemented it here, didn't produce useful results to me. I'm going to have to try something else.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-Attempt 1:
+Attempt 2:
 
 Initial ideas and thoughts:
 ARIMA sounds interesting to me, I'd like to try this one out. 
@@ -58,3 +58,7 @@ I feel as though I'm on the right track with this method but I'm running out of 
 
 I'm not terribly happy with what results I have thus far but I suppose it's not as bad as previous projects. I'd consider this project a "middle of the road" experience and results.
 In the future I'd probably skip Linear Regression all together, it looks like it wasn't that useful afterall, my gut feeling on this project was wrong.
+
+Maybe I incorrectly cleaned or modified the dataset, maybe I should have done more feature engineering. Looking back I'm not sure what else I could have done.
+There weren't many features that seemed useful to me, maybe I could have used the other products in some way? 
+Or, maybe I could have used product_category in some way. I simply removed it since I was using the same product but perhaps seeing how the overall product_category relates to demand might help.
