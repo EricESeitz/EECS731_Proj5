@@ -8,6 +8,8 @@ After downloading the data and loading it into jupyter notebooks I see that we d
 The initial rows in the data set are:
 Product_Code 	Warehouse 	Product_Category 	Date 	Order_Demand
 
+Attempt 1:
+
 Initial ideas and thoughts:
 "Formulate one or two ideas on how feature engineering would help the data set to establish additional value using exploratory data analysis"
 - So we want to pick ONE particular product and make a model determining the demand. To me this sounds like we should remove the OTHER products to not muddy the data.
@@ -27,4 +29,32 @@ Ideas:
 I'd like to try Linear Regression again, I think we should be able to fit the data we have well enought to get an idea of... something?
 My first instinct is to map "demand" over the date, thus seeing how demand has gone up and down over time. Sounds like the simplest way to me.
 
+Implementation:
+Going off of project 4 I tried to implement Linear Regression similar to last time since I got a pretty decent overall output.
+I ended up building a model just from date (converted to a number to get it to run) and the order_demand.
 
+Results:
+A resounding failure! I guess from my lack of feaures it didn't really predict... anything. Or at least according to the r2 score it's a very poor fit.
+The scatter plot tells the same story (LinearRegressionPlot01 in the visuals folder). Linear Regression, or at least how I implemented it here, didn't produce useful results to me. I'm going to have to try something else.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Attempt 1:
+
+Initial ideas and thoughts:
+ARIMA sounds interesting to me, I'd like to try this one out. 
+I'll need to remake the data from before I messed with the date from Linear Regression. I'd like to keep the original date format if possible.
+
+Implementation:
+I don't have much experience with ARIMA so I'll be following an example found here: 
+https://www.digitalocean.com/community/tutorials/a-guide-to-time-series-forecasting-with-arima-in-python-3
+
+Initially it seems like it's going well, the example data seems similar to the data I'll be using which is a good sign!
+I'm having some trouble with the fit however, it looks like predictions are an order of magnitude off from the actual data and I'm not sure why
+(See ARIMAPlot01.png). It looks like the spikes are similar but considerably less than the data and honestly I'm not sure why. I've spent a lot of time trying to troubleshoot what code I have so far.
+
+Results:
+Better than Linear Regression I think, I can see the beginnings of a model that might work by looking at the results of ARIMAPlot01 but something isn't working quite right.
+I feel as though I'm on the right track with this method but I'm running out of time to experiment with running the model as it's fairly slow on my computer.
+
+I'm not terribly happy with what results I have thus far but I suppose it's not as bad as previous projects. I'd consider this project a "middle of the road" experience and results.
+In the future I'd probably skip Linear Regression all together, it looks like it wasn't that useful afterall, my gut feeling on this project was wrong.
